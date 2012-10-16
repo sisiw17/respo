@@ -25,6 +25,9 @@ def connection(adresse):
 
 RES = connection(sys.argv[1])
 FILE = open(sys.argv[2], "w")
+
+print "happy"
+
 logger(FILE, "status:%s\n"%str(RES.status))
 DATA = RES.read()
 logger(FILE, "longeur:%s\n"%len(DATA))
